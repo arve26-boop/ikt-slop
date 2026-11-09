@@ -19,18 +19,33 @@
     </nav>
      <style>
         
-        /* Container that holds the images */
-        .image-row {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); 
-        gap: 20px; /* Spacing between rows and columns */
+        
+        .response {
+        padding: 0 6px;
+        float: left;
+        width 24,999%;
         }
 
-        /* Styling for each image box */
-        .image-box {
-        width: auto;       /* Makes image fill its specific grid cell */
-        height: auto;     /* Sets a uniform height for all rows */
-        object-fit: cover; /* Crops the image neatly inside the uniform box */     /* Gives each image equal width */
+                div.gallery {
+          border: 1px solid #ccc;
+        }
+        
+        div.gallery:hover {
+          border: 1px solid #777;
+        }
+        
+        div.gallery img {
+          width: 100%;
+          height: auto;
+        }
+        
+        div.desc {
+          padding: 15px;
+          text-align: center;
+        }
+        
+        * {
+          box-sizing: border-box;
         }
 
         
@@ -51,28 +66,31 @@
     <h1>velkommen til galleriet</h1>
     <h2>her finner du den fineste kunsten laget i mine veldig produktive timer</h2>
 
-    <main class="image-row">
-        <figure class="spiderman back to ballin">
+    <main class="response">
+        <figure class="gallery">
             <img src="bilder/spidermanbacktoballin.png" style="max-width:340px;height:auto;">
             <figcaption>først time photoshop</figcaption>
         </figure>
-        <figure class="image-box">
+    <main class="response">
+        <figure class="gallery">
             <img src="bilder/eminem.png" style="width: 340px;height: auto;">
             <figcaption>jeg kjeda meg i indesign</figcaption>
         </figure>
-        <figure class="image-box">
+    <main class="response">
+        <figure class="gallery">
             <img src="bilder/joker.png" style="width: 340px;height: auto;">
             <figcaption>lage denne med eminem</figcaption>
         </figure>
-        <figure class="image-box">
+    <main class="response">
+        <figure class="gallery">
             <img src="bilder/album.png" style="width: 340px;height: auto;">
             <figcaption>album cover fra affinity</figcaption>
         </figure>
-        <figure class="image-box">
+    <main class="response">
+        <figure class="gallery">
             <img src="bilder/Untitled-1.png" style="width: 340px;height: auto;">
             <figcaption>jeg laga den fordi vi må få pirate tokenS</figcaption>
         </figure>
     </main>
-
 </body>
 </html>
