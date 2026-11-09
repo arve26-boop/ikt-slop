@@ -8,6 +8,12 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
+    .vertical-scroll {
+        height: 200px; 
+        border: 1px solid #ffffff;
+        padding: 10px;
+    }
+
 
     .hero-container {
       position: relative;
