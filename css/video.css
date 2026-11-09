@@ -1,9 +1,37 @@
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 1. The Outer Container */
+.video-background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Hides any video overlap */
+}
+
+/* 2. The Actual Video Element */
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Forces video to scale like a background image */
+  object-position: center; /* Keeps the action centered */
+  z-index: -1; /* Pushes the video behind your text */
+}
+
+/* 3. The Overlay Content */
+.content {
+  position: relative;
+  z-index: 1; /* Ensures text stays above the video */
+  color: #ffffff;
+  text-align: center;
+  padding-top: 20vh;
 }
  * {
       box-sizing: border-box;
