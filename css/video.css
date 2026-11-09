@@ -1,4 +1,4 @@
-/* 1. Eliminate all scrollbars and default spacing */
+
     html, body {
       margin: 0;
       padding: 0;
@@ -8,7 +8,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
-    /* 2. Hero container locked strictly to the viewport */
+
     .hero-container {
       position: relative;
       width: 100vw;
@@ -18,7 +18,7 @@
       align-items: center;
     }
 
-    /* 3. The scaling background video */
+
     .hero-container video {
       position: absolute;
       top: 0;
@@ -30,18 +30,17 @@
       z-index: 1;
     }
 
-    /* 4. The Overlay tint (Crucial for text legibility) */
+    /
     .hero-overlay {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Adjust the 0.5 to make it darker or lighter */
+      background: rgba(0, 0, 0, 0.5); 
       z-index: 2;
     }
 
-    /* 5. Content positioned completely on top */
     .hero-content {
       position: relative;
       z-index: 3;
@@ -65,7 +64,7 @@
       line-height: 1.6;
     }
 
-    /* Simple Call-to-Action Button */
+  
     .cta-button {
       display: inline-block;
       padding: 14px 30px;
@@ -83,7 +82,7 @@
       background-color: #f0f0f0;
     }
 
-    /* Responsive adjustments for mobile screens */
+  
     @media (max-width: 768px) {
       .hero-content h1 {
         font-size: 2.2rem;
@@ -105,20 +104,20 @@
       line-height: 1.6;
     }
 
-    /* Top Navigation Bar Container */
+
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #1e293b; /* Dark slate gray */
+      background-color: #1e293b; 
       padding: 16px 32px;
-      position: sticky; /* Keeps navbar locked to the top on scroll */
+      position: sticky; 
       top: 0;
       z-index: 1000;
       box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
     }
 
-    /* Logo Styling */
+    
     .navbar-logo a {
       color: #f8fafc;
       font-size: 1.5rem;
@@ -127,16 +126,15 @@
       letter-spacing: -0.5px;
     }
 
-    /* Navigation Links List Container */
     .nav-links {
       display: flex;
       gap: 24px;
       list-style: none;
     }
 
-    /* Navigation Link Items */
+
     .nav-links a {
-      color: #cbd5e1; /* Light gray text */
+      color: #cbd5e1;
       text-decoration: none;
       font-size: 1rem;
       font-weight: 500;
@@ -145,26 +143,25 @@
       transition: all 0.3s ease;
     }
 
-    /* Hover State for Links */
+
     .nav-links a:hover {
       color: #ffffff;
-      background-color: #334155; /* Lighter slate gray accent */
+      background-color: #334155;
     }
 
-    /* Active/Current Page Link State */
+    
     .nav-links a.active {
       color: #ffffff;
-      background-color: #3b82f6; /* Modern Blue accent color */
+      background-color: #3b82f6; 
     }
 
-    /* Main Page Content (For spacing demonstration) */
     .content-wrapper {
       max-width: 1200px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    /* Mobile Breakpoint (Screens under 768px wide) */
+    
     @media (max-width: 768px) {
       .navbar {
         flex-direction: column;
@@ -176,7 +173,7 @@
         width: 100%;
         justify-content: center;
         gap: 12px;
-        flex-wrap: wrap; /* Wraps links onto a new line if screen is tiny */
+        flex-wrap: wrap;
       }
 
       .nav-links a {
