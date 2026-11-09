@@ -5,3 +5,95 @@
   min-width: 100%;
   min-height: 100%;
 }
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8fafc;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    /* Top Navigation Bar Container */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1e293b; /* Dark slate gray */
+      padding: 16px 32px;
+      position: sticky; /* Keeps navbar locked to the top on scroll */
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    }
+
+    /* Logo Styling */
+    .navbar-logo a {
+      color: #f8fafc;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    /* Navigation Links List Container */
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    /* Navigation Link Items */
+    .nav-links a {
+      color: #cbd5e1; /* Light gray text */
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    /* Hover State for Links */
+    .nav-links a:hover {
+      color: #ffffff;
+      background-color: #334155; /* Lighter slate gray accent */
+    }
+
+    /* Active/Current Page Link State */
+    .nav-links a.active {
+      color: #ffffff;
+      background-color: #3b82f6; /* Modern Blue accent color */
+    }
+
+    /* Main Page Content (For spacing demonstration) */
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* Mobile Breakpoint (Screens under 768px wide) */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap; /* Wraps links onto a new line if screen is tiny */
+      }
+
+      .nav-links a {
+        font-size: 0.95rem;
+        padding: 6px 10px;
+      }
+    }
