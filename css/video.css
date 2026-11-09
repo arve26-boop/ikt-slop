@@ -1,38 +1,97 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
+/* 1. Eliminate all scrollbars and default spacing */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
-/* 1. The Outer Container */
-.video-background {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden; /* Hides any video overlap */
-}
+    /* 2. Hero container locked strictly to the viewport */
+    .hero-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-/* 2. The Actual Video Element */
-.video-background video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Forces video to scale like a background image */
-  object-position: center; /* Keeps the action centered */
-  z-index: -1; /* Pushes the video behind your text */
-}
+    /* 3. The scaling background video */
+    .hero-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 1;
+    }
 
-/* 3. The Overlay Content */
-.content {
-  position: relative;
-  z-index: 1; /* Ensures text stays above the video */
-  color: #ffffff;
-  text-align: center;
-  padding-top: 20vh;
-}
+    /* 4. The Overlay tint (Crucial for text legibility) */
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Adjust the 0.5 to make it darker or lighter */
+      z-index: 2;
+    }
+
+    /* 5. Content positioned completely on top */
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      color: #ffffff;
+      text-align: center;
+      padding: 0 20px;
+      max-width: 800px;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .hero-content p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    /* Simple Call-to-Action Button */
+    .cta-button {
+      display: inline-block;
+      padding: 14px 30px;
+      font-size: 1rem;
+      color: #000000;
+      background-color: #ffffff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      background-color: #f0f0f0;
+    }
+
+    /* Responsive adjustments for mobile screens */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      .hero-content p {
+        font-size: 1rem;
+      }
+    }
  * {
       box-sizing: border-box;
       margin: 0;
