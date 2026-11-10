@@ -13,6 +13,16 @@
         padding: 10px;
     }
 
+    .video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Forces the video to cover the entire window */
+    z-index: -1;       /* Places it behind content layers */
+}
+
 
     .hero-container {
       position: relative;
