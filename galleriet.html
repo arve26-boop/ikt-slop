@@ -19,34 +19,22 @@
     </nav>
      <style>
         
-        
-        .response {
-        padding: 0 6px;
-        float: left;
-        width 24,999%;
-        }
-
-                div.gallery {
-          border: 1px solid #ccc;
-        }
-        
-        div.gallery:hover {
-          border: 1px solid #777;
-        }
-        
-        div.gallery img {
-          width: 100%;
-          height: auto;
-        }
-        
-        div.desc {
-          padding: 15px;
-          text-align: center;
-        }
-        
-        * {
-          box-sizing: border-box;
-        }
+            .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    
+    /* Create two equal columns that sits next to each other */
+    .column {
+      flex: 50%;
+      padding: 0 4px;
+    }
+    
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+    }
 
         
 
@@ -66,36 +54,15 @@
     <h1>velkommen til galleriet</h1>
     <h2>her finner du den fineste kunsten laget i mine veldig produktive timer</h2>
 
-    <main class="response">
-        <figure class="gallery">
-             <a target="_blank" href="bilder/spidermanbacktoballin.png">
-            <img src="bilder/spidermanbacktoballin.png" style="max-width:340px;height:auto;">
-            <figcaption>først time photoshop</figcaption>
-        </figure>
-    <main class="response">
-        <figure class="gallery">
-            <a target="_blank" href="bilder/eminem.png">
-            <img src="bilder/eminem.png" style="width: 340px;height: auto;">
-            <figcaption>jeg kjeda meg i indesign</figcaption>
-        </figure>
-    <main class="response">
-        <figure class="gallery">
-            <a target="_blank" href="bilder/joker.png">
-            <img src="bilder/joker.png" style="width: 340px;height: auto;">
-            <figcaption>lage denne med eminem</figcaption>
-        </figure>
-    <main class="response">
-        <figure class="gallery">
-            <a target="_blank" href="bilder/album.png">
-            <img src="bilder/album.png" style="width: 340px;height: auto;">
-            <figcaption>album cover fra affinity</figcaption>
-        </figure>
-    <main class="response">
-        <figure class="gallery">
-            <a target="_blank" href="bilder/untiteled-1.png">
-            <img src="bilder/Untitled-1.png" style="width: 340px;height: auto;">
-            <figcaption>jeg laga den fordi vi må få pirate tokenS</figcaption>
-        </figure>
-    </main>
+    <div class="row">
+  <div class="column">
+    <img src="spidermanbacktoballin.png">
+    <img src="untitled-1.png">
+    <img src="album.png">
+    <img src="paris.jpg">
+    <img src="nature.jpg">
+    <img src="mist.jpg">
+    <img src="paris.jpg">
+  </div>
 </body>
 </html>
