@@ -20,29 +20,60 @@
     </nav>
      <style>
         
-            .row {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0 4px;
-    }
-    
-    /* Create two equal columns that sits next to each other */
-    .column {
-      flex: 50%;
-      padding: 0 4px;
-    }
-    
-    .column img {
-      margin-top: 8px;
-      vertical-align: middle;
-    }
+       /* Gallery container layout */
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
 
-        
+        /* Individual gallery item boxes */
+        .gallery-item {
+            flex: 1 1 calc(25% - 16px); /* 4 items per row on large screens */
+            min-width: 250px; /* Prevents boxes from shrinking too much */
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
 
-        /* Mobile Responsive View */
-        @media (max-width: 600px) {
-            .image-row {
-                flex-direction: column; /* Stack vertically on small screens */
+        /* Hover zoom effect */
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Force images to align and crop evenly */
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Crops image uniformly without distortion */
+            display: block;
+        }
+
+        /* Caption text layout */
+        .caption {
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Responsive breakpoints */
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex: 1 1 calc(50% - 16px); /* 2 items per row on tablets */
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-item {
+                flex: 1 1 100%; /* 1 item per row on mobile phones */
             }
         }
     </style>
@@ -55,11 +86,32 @@
     <h1>velkommen til galleriet</h1>
     <h2>her finner du den fineste kunsten laget i mine veldig produktive timer</h2>
 
-    <div class="row">
-  <div class="column">
-    <img src="bilder/spidermanbacktoballin.png">
-    <img src="bilder/untitled-1.png">
-    <img src="bilder/album.png">
-  </div>
+     <div class="gallery-container">
+
+        <!-- Gallery Item 1 -->
+        <div class="gallery-item">
+            <img src="https://picsum.photos" alt="Beautiful landscape">
+            <div class="caption">Mountain Landscape</div>
+        </div>
+
+        <!-- Gallery Item 2 -->
+        <div class="gallery-item">
+            <img src="https://picsum.photos" alt="City streets at night">
+            <div class="caption">Vibrant City Life</div>
+        </div>
+
+        <!-- Gallery Item 3 -->
+        <div class="gallery-item">
+            <img src="bilder/joker.png" alt="Ocean waves crashing">
+            <div class="caption">Peaceful Ocean</div>
+        </div>
+
+        <!-- Gallery Item 4 -->
+        <div class="gallery-item">
+            <img src="bilder/spidermanbacktoballin.png" alt="Forest paths">
+            <div class="caption">Deep Green Forest</div>
+        </div>
+
+    </div>
 </body>
 </html>
