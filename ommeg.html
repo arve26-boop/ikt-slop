@@ -21,13 +21,21 @@
     </nav>
      <style>
 
-        .scroll-box {
-            width: 300px;
-            height: 150px;
-            overflow: auto;
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
+        .scroll-container {
+              /* Step 1: Establish a maximum or fixed height boundary */
+              height: 250px; 
+              width: 100%;
+              
+              /* Step 2: Enable vertical scrolling automatically when needed */
+              overflow-y: auto; 
+              
+              /* Optional: Prevent horizontal scrollbars if text wraps */
+              overflow-x: hidden; 
+            
+              /* Presentational styling */
+              border: 1px solid #ccc;
+              padding: 15px;
+            }
         
 
         .gallery-container {
@@ -88,7 +96,7 @@
     </style>
 </head>
 <body>
-    <div class="scroll-box">
+    <div class="scroll-contianer">
         <H1>Her har du litt info om meg</H1>
             <p>denne siden er her hovedsakligt for og få slider</p>
     
