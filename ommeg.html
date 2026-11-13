@@ -19,6 +19,65 @@
             <li><a href="ommeg.html">Om meg</a></li>
         </ul>
     </nav>
+     <style>
+        
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+
+        .gallery-item {
+            flex: 1 1 calc(25% - 16px); 
+            min-width: 250px; /* Prevents boxes from shrinking too much */
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        /* Hover zoom effect */
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Force images to align and crop evenly */
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Crops image uniformly without distortion */
+            display: block;
+        }
+
+        /* Caption text layout */
+        .caption {
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Responsive breakpoints */
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex: 1 1 calc(50% - 16px); /* 2 items per row on tablets */
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-item {
+                flex: 1 1 100%; /* 1 item per row on mobile phones */
+            }
+        }
+    </style>
 </head>
 <body>
     <H1>Her har du litt info om meg</H1>
