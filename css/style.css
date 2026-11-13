@@ -4,11 +4,7 @@
       margin: 0;
       padding: 0;
     }
-   .vertical-scroll {
-           height: 200px; 
-           border: 1px solid #FF0000;
-           padding: 10px;
-       }
+   
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -29,6 +25,14 @@
       z-index: 1000;
       box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
     }
+
+
+
+   .vertical-scroll {
+           height: 200px; 
+           border: 1px solid #FF0000;
+           padding: 10px;
+       }
 
     /* Logo Styling */
     .navbar-logo a {
