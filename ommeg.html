@@ -22,17 +22,17 @@
      <style>
 
         .scroll-container {
-              /* Step 1: Establish a maximum or fixed height boundary */
+             
               height: 250px; 
               width: 100%;
               
-              /* Step 2: Enable vertical scrolling automatically when needed */
+             
               overflow-y: auto; 
               
-              /* Optional: Prevent horizontal scrollbars if text wraps */
+              
               overflow-x: hidden; 
             
-              /* Presentational styling */
+              
               border: 1px solid #ccc;
               padding: 15px;
             }
@@ -51,7 +51,7 @@
 
         .gallery-item {
             flex: 1 1 calc(25% - 16px); 
-            min-width: 250px; /* Prevents boxes from shrinking too much */
+            min-width: 250px; 
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -60,21 +60,21 @@
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        /* Hover zoom effect */
+       
         .gallery-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
-        /* Force images to align and crop evenly */
+       
         .gallery-item img {
             width: 100%;
             height: 250px;
-            object-fit: cover; /* Crops image uniformly without distortion */
+            object-fit: cover;
             display: block;
         }
 
-        /* Caption text layout */
+        
         .caption {
             padding: 15px;
             text-align: center;
@@ -82,15 +82,15 @@
             color: #555;
         }
 
-        /* Responsive breakpoints */
+       
         @media (max-width: 768px) {
             .gallery-item {
-                flex: 1 1 calc(50% - 16px); /* 2 items per row on tablets */
+                flex: 1 1 calc(50% - 16px); 
             }
         }
         @media (max-width: 480px) {
             .gallery-item {
-                flex: 1 1 100%; /* 1 item per row on mobile phones */
+                flex: 1 1 100%; 
             }
         }
     </style>
